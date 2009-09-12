@@ -34,7 +34,7 @@ public class AboutMe extends Applet {
 		g.setFont(small);
 		g.drawString("Circumnavigated the Globe in the Navy", 220, 410 );
 		
-		g.drawImage(img, 0, 0, 550,300,this);
+		g.drawImage(img, 0, 0, 550,309,this);
 		
 	}//end method paint
 }//end class AboutMe
