@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/JABluebonnets.JPG</name>
+			<type>1</type>
+			<location>D:/projects/Eclipse/AboutMe/src/JABluebonnets.JPG</location>
+		</link>
+	</linkedResources>
 </projectDescription>
