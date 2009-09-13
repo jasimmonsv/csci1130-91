@@ -16,7 +16,7 @@ public class Poem extends Applet{
 		//*************************Declerations****************************
 		int xint = 20;
 		int yint= 65;
-		Image img = getImage(getCodeBase(), "CoffeeArmyThumb.jpg");
+		Image img = getImage(getCodeBase(), "./CoffeeArmyThumb.jpg");
 		Random randNum = new Random();
 		Color txtColor[]={
 		Color.black,
