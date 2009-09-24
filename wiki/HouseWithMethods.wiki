@@ -1,0 +1,14 @@
+#summary One-This was a simple in class project to show the use of methods.
+#labels Java,methods,beginner
+
+= Introduction =
+
+House with Method project is a simple exercise to illustrate the use of methods, and how simple changes are propagated easily.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
