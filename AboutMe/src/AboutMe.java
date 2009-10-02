@@ -12,9 +12,14 @@ import java.applet.*;
 
 public class AboutMe extends Applet {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public void paint(Graphics g) {
 		
-		Image img = getImage( getCodeBase(), "JABluebonnets.jpg");
+		Image img = getImage( getCodeBase(), "./JABluebonnets.JPG");
 		Font small = new Font("Serif", Font.PLAIN, 8);
 		Font medium = new Font("Serif", Font.ITALIC, 12);
 		Font large = new Font("Serif", Font.PLAIN, 25);
