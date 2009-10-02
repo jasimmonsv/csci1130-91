@@ -1,3 +1,5 @@
+package src;
+
 /**
  * 
  * @author J.A. Simmons V, Wes Strand, Rinku Malhotra, Bach Dang
