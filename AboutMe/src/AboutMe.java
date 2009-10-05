@@ -16,7 +16,7 @@ public class AboutMe extends Applet
 
 	public void paint(Graphics g) {
 		
-		Image img = getImage( getCodeBase(), "JABluebonnets.JPG");
+		Image img = getImage( getCodeBase(), "./JABluebonnets.JPG");
 		Font small = new Font("Serif", Font.PLAIN, 8);
 		Font medium = new Font("Serif", Font.ITALIC, 12);
 		Font large = new Font("Serif", Font.PLAIN, 25);
