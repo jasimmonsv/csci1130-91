@@ -4,7 +4,7 @@
  * AboutMe Applet application
  *
  * @author J.A. Simmons V
- * @version 1.00 2009/9/12
+ * @version 1.2 05Oct2009
  */
 
 import java.awt.*;
