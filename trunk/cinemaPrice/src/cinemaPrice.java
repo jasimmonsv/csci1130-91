@@ -1,66 +1,72 @@
-/**
- * @(#)cinemaPrice.java
- *
- * cinemaPrice Applet application
- *
- * @author 
- * @version 1.00 2009/9/30
- */
+
  
 import java.awt.*;
 import java.applet.*;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.event.*;
 import java.text.DecimalFormat;
-import java.util.Calendar;
 
-public class cinemaPrice extends Applet {
-	/**
-	 * 
-	 */
+public class cinemaPrice extends JApplet{
 	//Version UID -- need to resolve error in Eclipse IDE
 	private static final long serialVersionUID = -4547408145084637657L;
 	
-	double FULL_PRICE=9.5; //full price of ticket
+	//global var declerations
+	public static double FULL_PRICE=9.5; //full price of ticket
 	double finalPrice; //initalize finalPrice var
-	double discountPercent = 0.30; //Discount percentage for matinee price
+	public static double discountPercent = 0.30; //Discount percentage for matinee price
 	
-	public void paint(Graphics g) 	
+	DecimalFormat twoDForm;
+	public static JPanel pane;
+	static JButton butStart;
+	static JLabel welcomeBanner;
+	static public ButtonHandler handler;
+	
+	public void init()
 	{
-		String txtAge;
-		txtAge=JOptionPane.showInputDialog("Enter in Age:");
-		int age = Integer.parseInt(txtAge);
-		finalPrice = priceToAgeCheck(age);
-		finalPrice = dateCheck(finalPrice);
+		handler = new ButtonHandler();
+		pane = new JPanel();
+		pane.setLayout( new FlowLayout());
+		//setup format for decimal format
+		twoDForm = new DecimalFormat("#.##");
+		KioskDisplay.welcomeScreen();
+		add(pane);
 		
-		//format finalPrice to 2 decimal points
-		DecimalFormat twoDForm = new DecimalFormat("#.##");
-		finalPrice = Double.valueOf(twoDForm.format(finalPrice));
 		
-		//draw the result
-		g.drawString("Final Price: "+finalPrice,50,60);
-	}//end method paint */
+		
+	}//end init method */
 	
-	public double priceToAgeCheck(int age)
+	public void run()
 	{
-		//check age to apply proper discount
-		if (age < 5 || age >=55)finalPrice=0;
-		if (age >=5 && age <13)finalPrice= FULL_PRICE/2;
-		if (age >=13 && age <55)finalPrice = FULL_PRICE;
-		return finalPrice;
-	}//end method priceToAgeCheck */
+		/*
+		 * RUN Method will assume that a display has been painted and will just 
+		 * revalidate and repaint the main pane component.
+		 */
+		pane.validate();
+		pane.repaint();
+	}//end run method
 	
-	public double dateCheck(double finalPrice)
+	private class ButtonHandler implements ActionListener
 	{
-		//check the day of week for possible matinee discounts 
-		Calendar dateTime = Calendar.getInstance();
-		int dayOfWeek = dateTime.get(Calendar.DAY_OF_WEEK);
-		//For days of week => 1=Sunday ... 7=Saturday
-		//int dayOfWeek = 1;
-		switch( dayOfWeek)
+		public void  actionPerformed (ActionEvent ae)
 		{
-		  case 1: case 7: break;
-		  default: finalPrice = finalPrice - (finalPrice* discountPercent); break; 
-		}//end Switch statement
-		return finalPrice;
-	}//end method matineeCheck */
+			Object obj = ae.getSource();
+			//if the start button was pressed
+			if (obj == KioskDisplay.butStart){ 
+				pane.removeAll();
+				KioskDisplay.intro();
+		    }
+			//if the age check button was pressed
+			if (obj == KioskDisplay.butAgeSubmit){
+				int age = Integer.parseInt(KioskDisplay.ageField.getText());
+				finalPrice = PriceCheck.priceCheck(age);
+				finalPrice = Double.valueOf(twoDForm.format(finalPrice));
+				JOptionPane.showMessageDialog(pane,"Final Price for age "+age+" is: "+finalPrice);
+				KioskDisplay.ageField.setText("");
+			}
+			else {
+				KioskDisplay.welcomeBanner.setText(obj.toString());
+			}//end if statement
+			run();
+		}//end private method actionPerformed
+	}//end private class ButtonHandler
 }//end class cinemaPrice
