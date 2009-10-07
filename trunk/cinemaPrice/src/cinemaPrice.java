@@ -1,9 +1,7 @@
 
  
 import java.awt.*;
-
 import javax.swing.*;
-
 import java.awt.event.*;
 import java.text.DecimalFormat;
 
@@ -24,10 +22,10 @@ public class cinemaPrice extends JApplet{
 	public static JLabel imageLabel;
 	private Image movieImages1, movieImages2, movieImages3, movieImages4;
 	public static ImageIcon movieIcon1, movieIcon2, movieIcon3, movieIcon4;	
-	public static String[][] movies = {{"./movieImages/cloudymeatballsPosterH85.jpg","Meatballs","Cloudy w/ Chance of Meatballs"},
-			 {"./movieImages/inventionOfLyingPosterH85.jpg","Inven Lying","The Invention of Lying"},
-			 {"./movieImages/surrogatesPosterH85.jpg","Surrogate","Surrogates"},
-			 {"./movieImages/zombielandPosterH85.jpg","Zombie","Zombieland"}
+	public static String[][] movies = {{"./cloudymeatballsPosterH85.jpg","Meatballs","Cloudy w/ Chance of Meatballs"},
+			 {"./inventionOfLyingPosterH85.jpg","Inven Lying","The Invention of Lying"},
+			 {"./surrogatesPosterH85.jpg","Surrogate","Surrogates"},
+			 {"./zombielandPosterH85.jpg","Zombie","Zombieland"}
 			};
 	private static String finalMovie;
 	

@@ -8,8 +8,9 @@
  */
 
 import java.util.Calendar;
+import javax.swing.*;
 
-public class PriceCheck {
+public class PriceCheck extends JApplet{
 
 	public static double priceCheck(int age)
 	{
