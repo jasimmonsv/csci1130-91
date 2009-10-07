@@ -15,6 +15,8 @@ public class KioskDisplay extends JApplet
 	public static JLabel ageLabel, welcomeBanner, finalPriceBanner, movieLabel1, movieLabel2, movieLabel3, movieLabel4;
 	public static JButton butAgeSubmit, butStart, movieButton1, movieButton2, movieButton3, movieButton4;
 		
+	
+//***********************ageCheck Method**********************
 	public static void ageCheck()
 	{
 		//setup Layouts
@@ -46,6 +48,7 @@ public class KioskDisplay extends JApplet
 		cinemaPrice.mainPane.repaint();
 	}//end method
 	
+	//*******************************welcomeScreen Method******************
 	public static void welcomeScreen()
 	{
 		//setup layout		
@@ -68,6 +71,7 @@ public class KioskDisplay extends JApplet
 		cinemaPrice.mainPane.repaint();
 	}//end method welcomeScreen */
 	
+	//**********************movieSelection Method****************************
 	public static void movieSelection()
 	{
 		//setup layouts and prep JPanels
@@ -110,6 +114,8 @@ public class KioskDisplay extends JApplet
 		cinemaPrice.mainPane.repaint();
 	}//end method welcomeScreen */
 	
+	
+	//****************************movieButtonSetup Method**********************
 	private static JButton movieButtonSetup(String movieTitle, JButton movieButton, ImageIcon movieIcon, int i)
 	{
 		movieButton = new JButton( movieTitle, movieIcon );

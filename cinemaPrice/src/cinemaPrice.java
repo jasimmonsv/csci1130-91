@@ -29,6 +29,8 @@ public class cinemaPrice extends JApplet{
 			};
 	private static String finalMovie;
 	
+	
+	//*****************INIT METHOD*************************
 	public void init()
 	{
 		handler = new ButtonHandler();
@@ -65,6 +67,8 @@ public class cinemaPrice extends JApplet{
 		add(mainPane);
 	}//end init method */
 	
+	
+	//*************************RUN METHOD************************
 	public void run()
 	{
 		/*
@@ -93,6 +97,7 @@ public class cinemaPrice extends JApplet{
 				KioskDisplay.finalPriceBanner.setText("Final Price for "+finalMovie+" & age "+age+" is: "+finalPrice);
 				KioskDisplay.ageField.setText("");
 			}
+			//Set String finalMovie var to movie title corresponds with which button pushed
 			if (obj == KioskDisplay.movieButton1){finalMovie=movies[0][2];KioskDisplay.ageCheck();}
 			if (obj == KioskDisplay.movieButton2){finalMovie=movies[1][2];KioskDisplay.ageCheck();}
 			if (obj == KioskDisplay.movieButton3){finalMovie=movies[2][2];KioskDisplay.ageCheck();}
