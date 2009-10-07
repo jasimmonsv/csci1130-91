@@ -6,11 +6,10 @@
  */
 
 import javax.swing.*;
-
 import java.awt.*;
 import java.applet.*;
 
-public class KioskDisplay
+public class KioskDisplay extends JApplet
 {
 	public static JTextField ageField;
 	public static JLabel ageLabel, welcomeBanner, finalPriceBanner, movieLabel1, movieLabel2, movieLabel3, movieLabel4;
