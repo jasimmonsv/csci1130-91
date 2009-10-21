@@ -17,5 +17,22 @@
 */
 
 public class Controller {
-
+	
+	/*
+	 * @param lightColor 1 = RedLight, 2=YellowLight, 3=GreenLight
+	 * @param returns true for error,  false for no error
+	 * 
+	 */
+	public static boolean changeLight(int lightColor)
+	{
+		boolean fail;
+		switch (lightColor)
+		{
+		case 1: View.lightImgLocation = "./trafficLightRed.jpg";fail = false;break;//if light is passed Red
+		case 2: View.lightImgLocation = "./trafficLightYellow.jpg";fail = false;break;//if light is passed yellow
+		case 3: View.lightImgLocation = "./trafficLightGreen.jpg";fail = false;break;//if light is passed green
+		default: View.lightImgLocation = ".trafficLightRed.jpg";fail = true;break;//if error occures
+		}//end case lightColor */
+		return fail;
+	}//end method changeLight */
 }
